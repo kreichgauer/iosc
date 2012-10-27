@@ -45,12 +45,18 @@
                                             withHandler:^(CMDeviceMotion *motionData, NSError *error)
              {
                  CMAttitude *attitude = motionData.attitude;
+                 CMAcceleration acceleration = motionData.userAcceleration;
 //                 NSLog(@"yaw: %f pitch: %f roll %f", attitude.yaw, attitude.pitch, attitude.roll);
 
-                 OSCMessage *newMsg = [OSCMessage createWithAddress:@"/iosc3"];
+                 OSCMessage *gyroMsg = [OSCMessage createWithAddress:@"/rotation"];
+                 [gyroMsg addFloat:attitude.yaw];
+                 [outPort sendThisMessage:gyroMsg];
 
-                 [newMsg addFloat:attitude.yaw];
-                 [outPort sendThisMessage:newMsg];
+                 OSCMessage *accelerationMsg = [OSCMessage createWithAddress:@"/acceleration"];
+                 [accelerationMsg addFloat:acceleration.x];
+                 [accelerationMsg addFloat:acceleration.y];
+                 [accelerationMsg addFloat:acceleration.z];
+                 [outPort sendThisMessage:accelerationMsg];
              }];
 
             [connectButton setHighlighted:YES];
