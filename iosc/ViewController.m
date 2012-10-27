@@ -51,14 +51,14 @@
              {
                  // create an output so i can send OSC data to myself
                  OSCOutPort *outPort = [oscManager createNewOutputToAddress:ipField.text atPort:portField.text.intValue];
-                 
+           
                  NSString *x = [[NSString alloc] initWithFormat:@"%.02f",gyroData.rotationRate.x];
                  NSString *y = [[NSString alloc] initWithFormat:@"%.02f",gyroData.rotationRate.y];
                  NSString *z = [[NSString alloc] initWithFormat:@"%.02f",gyroData.rotationRate.z];
-                 NSLog(@"%@,%@,%@", x, y, z);
+                 // NSLog(@"%@,%@,%@", x, y, z);
                  
                  // make an OSC message
-                 OSCMessage *newMsg = [OSCMessage createWithAddress:@"/Address/Path/1"];
+                 OSCMessage *newMsg = [OSCMessage createWithAddress:@"/iosc3"];
 
                  // add a bunch arguments to the message
                  [newMsg addFloat:gyroData.rotationRate.x];
@@ -68,6 +68,9 @@
                  // send the OSC message
                  [outPort sendThisMessage:newMsg];
              }];
+
+            [connectButton setHighlighted:YES];
+            [disconnectButton setHighlighted:NO];
         }
     }
     else
@@ -78,7 +81,9 @@
 
 - (IBAction)disconnectPressed:(UIButton *)sender
 {
-    
+    [self.motionManager stopGyroUpdates];
+    [connectButton setHighlighted:NO];
+    [disconnectButton setHighlighted:YES];
 }
 
 @end

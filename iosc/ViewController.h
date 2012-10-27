@@ -13,6 +13,8 @@
 @interface ViewController : UIViewController {
     IBOutlet UITextField *ipField;
     IBOutlet UITextField *portField;
+    IBOutlet UIButton *connectButton;
+    IBOutlet UIButton *disconnectButton;
 }
 
 @property (retain, nonatomic) CMMotionManager *motionManager;
