@@ -30,8 +30,8 @@
         if([self.motionManager isGyroActive] == NO)
         {
             /* Update us 2 times a second */
-            [self.motionManager setGyroUpdateInterval:1.0f / 2.0f];
-
+            [self.motionManager setGyroUpdateInterval:1.0f / 60];
+            
             /* And on a handler block object */
 
             /* Receive the gyroscope data on this block */
@@ -39,14 +39,9 @@
                                             withHandler:^(CMGyroData *gyroData, NSError *error)
              {
                  NSString *x = [[NSString alloc] initWithFormat:@"%.02f",gyroData.rotationRate.x];
-//                 self.gyro_xaxis.text = x;
-
                  NSString *y = [[NSString alloc] initWithFormat:@"%.02f",gyroData.rotationRate.y];
-//                 self.gyro_yaxis.text = y;
-
                  NSString *z = [[NSString alloc] initWithFormat:@"%.02f",gyroData.rotationRate.z];
-//                 self.gyro_zaxis.text = z;
-                 NSLog(@"x: %@ y: %@ z: %@", x, y, z);
+                 NSLog(@"%@,%@,%@", x, y, z);
              }];
         }
     }
