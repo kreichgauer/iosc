@@ -7,10 +7,11 @@
 //
 
 #import "AppDelegate.h"
-
 #import "ViewController.h"
 
 @implementation AppDelegate
+
+@synthesize oscManager;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -50,6 +51,29 @@
         NSLog(@"Gyroscope not Available!");
     }
 
+    // create an OSCManager- set myself up as its delegate
+    oscManager = [[OSCManager alloc] init];
+    OSCManager *manager = oscManager;
+    [manager setDelegate:self];
+    
+    // create an input port for receiving OSC data
+    [manager createNewInputForPort:1234];
+    
+    // create an output so i can send OSC data to myself
+    OSCOutPort *outPort = [manager createNewOutputToAddress:@"192.168.251.12" atPort:1234];
+    
+    // make an OSC message
+    OSCMessage *newMsg = [OSCMessage createWithAddress:@"/Address/Path/1"];
+    
+    // add a bunch arguments to the message
+    [newMsg addInt:12];
+    [newMsg addFloat:12.34];
+    [newMsg addBOOL:YES];
+    [newMsg addString:@"Hello World!"];
+
+    // send the OSC message
+    [outPort sendThisMessage:newMsg];
+    
     return YES;
 }
 

@@ -19,6 +19,8 @@
 		AC132A2B163C1050006148EB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC132A2A163C1050006148EB /* ViewController.m */; };
 		AC132A2E163C1050006148EB /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC132A2C163C1050006148EB /* ViewController.xib */; };
 		AC132A35163C1608006148EB /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC132A34163C1608006148EB /* CoreMotion.framework */; };
+		AC45D891163C355E00439E73 /* libVVOSC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC45D87A163C355E00439E73 /* libVVOSC.a */; };
+		AC45D90F163C388C00439E73 /* libVVOSC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC45D90D163C388C00439E73 /* libVVOSC.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,58 @@
 		AC132A2A163C1050006148EB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		AC132A2D163C1050006148EB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		AC132A34163C1608006148EB /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		AC45D861163C355E00439E73 /* MutLockArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutLockArray.h; sourceTree = "<group>"; };
+		AC45D862163C355E00439E73 /* MutLockDict.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutLockDict.h; sourceTree = "<group>"; };
+		AC45D863163C355E00439E73 /* MutNRLockArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutNRLockArray.h; sourceTree = "<group>"; };
+		AC45D864163C355E00439E73 /* MutNRLockDict.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutNRLockDict.h; sourceTree = "<group>"; };
+		AC45D865163C355E00439E73 /* NamedMutLockArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NamedMutLockArray.h; sourceTree = "<group>"; };
+		AC45D866163C355E00439E73 /* ObjectHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectHolder.h; sourceTree = "<group>"; };
+		AC45D867163C355E00439E73 /* OSCAddressSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCAddressSpace.h; sourceTree = "<group>"; };
+		AC45D868163C355E00439E73 /* OSCBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCBundle.h; sourceTree = "<group>"; };
+		AC45D869163C355E00439E73 /* OSCConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCConstants.h; sourceTree = "<group>"; };
+		AC45D86A163C355E00439E73 /* OSCInPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCInPort.h; sourceTree = "<group>"; };
+		AC45D86B163C355E00439E73 /* OSCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCManager.h; sourceTree = "<group>"; };
+		AC45D86C163C355E00439E73 /* OSCMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCMessage.h; sourceTree = "<group>"; };
+		AC45D86D163C355E00439E73 /* OSCNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCNode.h; sourceTree = "<group>"; };
+		AC45D86E163C355E00439E73 /* OSCOutPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCOutPort.h; sourceTree = "<group>"; };
+		AC45D86F163C355E00439E73 /* OSCPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCPacket.h; sourceTree = "<group>"; };
+		AC45D870163C355E00439E73 /* OSCStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCStringAdditions.h; sourceTree = "<group>"; };
+		AC45D871163C355E00439E73 /* OSCValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCValue.h; sourceTree = "<group>"; };
+		AC45D872163C355E00439E73 /* OSCZeroConfDomain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCZeroConfDomain.h; sourceTree = "<group>"; };
+		AC45D873163C355E00439E73 /* OSCZeroConfManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCZeroConfManager.h; sourceTree = "<group>"; };
+		AC45D874163C355E00439E73 /* VVAssertionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVAssertionHandler.h; sourceTree = "<group>"; };
+		AC45D875163C355E00439E73 /* VVBasicMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVBasicMacros.h; sourceTree = "<group>"; };
+		AC45D876163C355E00439E73 /* VVBasics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVBasics.h; sourceTree = "<group>"; };
+		AC45D877163C355E00439E73 /* VVOSC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVOSC.h; sourceTree = "<group>"; };
+		AC45D878163C355E00439E73 /* VVStopwatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVStopwatch.h; sourceTree = "<group>"; };
+		AC45D879163C355E00439E73 /* VVThreadLoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVThreadLoop.h; sourceTree = "<group>"; };
+		AC45D87A163C355E00439E73 /* libVVOSC.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libVVOSC.a; sourceTree = "<group>"; };
+		AC45D8F4163C388C00439E73 /* MutLockArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutLockArray.h; sourceTree = "<group>"; };
+		AC45D8F5163C388C00439E73 /* MutLockDict.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutLockDict.h; sourceTree = "<group>"; };
+		AC45D8F6163C388C00439E73 /* MutNRLockArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutNRLockArray.h; sourceTree = "<group>"; };
+		AC45D8F7163C388C00439E73 /* MutNRLockDict.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutNRLockDict.h; sourceTree = "<group>"; };
+		AC45D8F8163C388C00439E73 /* NamedMutLockArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NamedMutLockArray.h; sourceTree = "<group>"; };
+		AC45D8F9163C388C00439E73 /* ObjectHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectHolder.h; sourceTree = "<group>"; };
+		AC45D8FA163C388C00439E73 /* OSCAddressSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCAddressSpace.h; sourceTree = "<group>"; };
+		AC45D8FB163C388C00439E73 /* OSCBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCBundle.h; sourceTree = "<group>"; };
+		AC45D8FC163C388C00439E73 /* OSCConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCConstants.h; sourceTree = "<group>"; };
+		AC45D8FD163C388C00439E73 /* OSCInPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCInPort.h; sourceTree = "<group>"; };
+		AC45D8FE163C388C00439E73 /* OSCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCManager.h; sourceTree = "<group>"; };
+		AC45D8FF163C388C00439E73 /* OSCMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCMessage.h; sourceTree = "<group>"; };
+		AC45D900163C388C00439E73 /* OSCNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCNode.h; sourceTree = "<group>"; };
+		AC45D901163C388C00439E73 /* OSCOutPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCOutPort.h; sourceTree = "<group>"; };
+		AC45D902163C388C00439E73 /* OSCPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCPacket.h; sourceTree = "<group>"; };
+		AC45D903163C388C00439E73 /* OSCStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCStringAdditions.h; sourceTree = "<group>"; };
+		AC45D904163C388C00439E73 /* OSCValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCValue.h; sourceTree = "<group>"; };
+		AC45D905163C388C00439E73 /* OSCZeroConfDomain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCZeroConfDomain.h; sourceTree = "<group>"; };
+		AC45D906163C388C00439E73 /* OSCZeroConfManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCZeroConfManager.h; sourceTree = "<group>"; };
+		AC45D907163C388C00439E73 /* VVAssertionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVAssertionHandler.h; sourceTree = "<group>"; };
+		AC45D908163C388C00439E73 /* VVBasicMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVBasicMacros.h; sourceTree = "<group>"; };
+		AC45D909163C388C00439E73 /* VVBasics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVBasics.h; sourceTree = "<group>"; };
+		AC45D90A163C388C00439E73 /* VVOSC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVOSC.h; sourceTree = "<group>"; };
+		AC45D90B163C388C00439E73 /* VVStopwatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVStopwatch.h; sourceTree = "<group>"; };
+		AC45D90C163C388C00439E73 /* VVThreadLoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVThreadLoop.h; sourceTree = "<group>"; };
+		AC45D90D163C388C00439E73 /* libVVOSC.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libVVOSC.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +104,8 @@
 				AC132A12163C1050006148EB /* UIKit.framework in Frameworks */,
 				AC132A14163C1050006148EB /* Foundation.framework in Frameworks */,
 				AC132A16163C1050006148EB /* CoreGraphics.framework in Frameworks */,
+				AC45D891163C355E00439E73 /* libVVOSC.a in Frameworks */,
+				AC45D90F163C388C00439E73 /* libVVOSC.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +119,7 @@
 				AC132A17163C1050006148EB /* iosc */,
 				AC132A10163C1050006148EB /* Frameworks */,
 				AC132A0E163C1050006148EB /* Products */,
+				AC45D8F1163C388C00439E73 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +144,7 @@
 		AC132A17163C1050006148EB /* iosc */ = {
 			isa = PBXGroup;
 			children = (
+				AC45D85F163C355E00439E73 /* VVOSC */,
 				AC132A20163C1050006148EB /* AppDelegate.h */,
 				AC132A21163C1050006148EB /* AppDelegate.m */,
 				AC132A29163C1050006148EB /* ViewController.h */,
@@ -109,6 +167,105 @@
 				AC132A27163C1050006148EB /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AC45D85F163C355E00439E73 /* VVOSC */ = {
+			isa = PBXGroup;
+			children = (
+				AC45D860163C355E00439E73 /* include */,
+				AC45D87A163C355E00439E73 /* libVVOSC.a */,
+			);
+			name = VVOSC;
+			path = ../VVOSC;
+			sourceTree = "<group>";
+		};
+		AC45D860163C355E00439E73 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				AC45D861163C355E00439E73 /* MutLockArray.h */,
+				AC45D862163C355E00439E73 /* MutLockDict.h */,
+				AC45D863163C355E00439E73 /* MutNRLockArray.h */,
+				AC45D864163C355E00439E73 /* MutNRLockDict.h */,
+				AC45D865163C355E00439E73 /* NamedMutLockArray.h */,
+				AC45D866163C355E00439E73 /* ObjectHolder.h */,
+				AC45D867163C355E00439E73 /* OSCAddressSpace.h */,
+				AC45D868163C355E00439E73 /* OSCBundle.h */,
+				AC45D869163C355E00439E73 /* OSCConstants.h */,
+				AC45D86A163C355E00439E73 /* OSCInPort.h */,
+				AC45D86B163C355E00439E73 /* OSCManager.h */,
+				AC45D86C163C355E00439E73 /* OSCMessage.h */,
+				AC45D86D163C355E00439E73 /* OSCNode.h */,
+				AC45D86E163C355E00439E73 /* OSCOutPort.h */,
+				AC45D86F163C355E00439E73 /* OSCPacket.h */,
+				AC45D870163C355E00439E73 /* OSCStringAdditions.h */,
+				AC45D871163C355E00439E73 /* OSCValue.h */,
+				AC45D872163C355E00439E73 /* OSCZeroConfDomain.h */,
+				AC45D873163C355E00439E73 /* OSCZeroConfManager.h */,
+				AC45D874163C355E00439E73 /* VVAssertionHandler.h */,
+				AC45D875163C355E00439E73 /* VVBasicMacros.h */,
+				AC45D876163C355E00439E73 /* VVBasics.h */,
+				AC45D877163C355E00439E73 /* VVOSC.h */,
+				AC45D878163C355E00439E73 /* VVStopwatch.h */,
+				AC45D879163C355E00439E73 /* VVThreadLoop.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		AC45D8F1163C388C00439E73 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC45D8F2163C388C00439E73 /* VVOSC */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC45D8F2163C388C00439E73 /* VVOSC */ = {
+			isa = PBXGroup;
+			children = (
+				AC45D8F3163C388C00439E73 /* include */,
+				AC45D90D163C388C00439E73 /* libVVOSC.a */,
+				AC45D90E163C388C00439E73 /* src */,
+			);
+			path = VVOSC;
+			sourceTree = "<group>";
+		};
+		AC45D8F3163C388C00439E73 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				AC45D8F4163C388C00439E73 /* MutLockArray.h */,
+				AC45D8F5163C388C00439E73 /* MutLockDict.h */,
+				AC45D8F6163C388C00439E73 /* MutNRLockArray.h */,
+				AC45D8F7163C388C00439E73 /* MutNRLockDict.h */,
+				AC45D8F8163C388C00439E73 /* NamedMutLockArray.h */,
+				AC45D8F9163C388C00439E73 /* ObjectHolder.h */,
+				AC45D8FA163C388C00439E73 /* OSCAddressSpace.h */,
+				AC45D8FB163C388C00439E73 /* OSCBundle.h */,
+				AC45D8FC163C388C00439E73 /* OSCConstants.h */,
+				AC45D8FD163C388C00439E73 /* OSCInPort.h */,
+				AC45D8FE163C388C00439E73 /* OSCManager.h */,
+				AC45D8FF163C388C00439E73 /* OSCMessage.h */,
+				AC45D900163C388C00439E73 /* OSCNode.h */,
+				AC45D901163C388C00439E73 /* OSCOutPort.h */,
+				AC45D902163C388C00439E73 /* OSCPacket.h */,
+				AC45D903163C388C00439E73 /* OSCStringAdditions.h */,
+				AC45D904163C388C00439E73 /* OSCValue.h */,
+				AC45D905163C388C00439E73 /* OSCZeroConfDomain.h */,
+				AC45D906163C388C00439E73 /* OSCZeroConfManager.h */,
+				AC45D907163C388C00439E73 /* VVAssertionHandler.h */,
+				AC45D908163C388C00439E73 /* VVBasicMacros.h */,
+				AC45D909163C388C00439E73 /* VVBasics.h */,
+				AC45D90A163C388C00439E73 /* VVOSC.h */,
+				AC45D90B163C388C00439E73 /* VVStopwatch.h */,
+				AC45D90C163C388C00439E73 /* VVThreadLoop.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		AC45D90E163C388C00439E73 /* src */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +415,21 @@
 		AC132A32163C1050006148EB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ADDITIONAL_SDKS = "";
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iosc/iosc-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Frameworks/VVOSC/include\"";
 				INFOPLIST_FILE = "iosc/iosc-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/iosc\"",
+					"\"$(SRCROOT)/Frameworks/VVOSC\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -269,9 +438,21 @@
 		AC132A33163C1050006148EB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ADDITIONAL_SDKS = "";
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iosc/iosc-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Frameworks/VVOSC/include\"";
 				INFOPLIST_FILE = "iosc/iosc-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/iosc\"",
+					"\"$(SRCROOT)/Frameworks/VVOSC\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -296,6 +477,7 @@
 				AC132A33163C1050006148EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
