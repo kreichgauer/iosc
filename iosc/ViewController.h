@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreMotion/CoreMotion.h>
+#import <VVOSC/VVOSC.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController {
+    IBOutlet UITextField *ipField;
+    IBOutlet UITextField *portField;
+}
+
+@property (retain, nonatomic) CMMotionManager *motionManager;
+@property (retain, nonatomic) OSCManager *oscManager;
+
+- (IBAction)connectPressed:(UIButton *)sender;
+- (IBAction)disconnectPressed:(UIButton *)sender;
 
 @end
