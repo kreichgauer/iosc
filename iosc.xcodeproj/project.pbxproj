@@ -18,6 +18,7 @@
 		AC132A28163C1050006148EB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC132A27163C1050006148EB /* Default-568h@2x.png */; };
 		AC132A2B163C1050006148EB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC132A2A163C1050006148EB /* ViewController.m */; };
 		AC132A2E163C1050006148EB /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC132A2C163C1050006148EB /* ViewController.xib */; };
+		AC132A35163C1608006148EB /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC132A34163C1608006148EB /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		AC132A29163C1050006148EB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		AC132A2A163C1050006148EB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		AC132A2D163C1050006148EB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		AC132A34163C1608006148EB /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC132A35163C1608006148EB /* CoreMotion.framework in Frameworks */,
 				AC132A12163C1050006148EB /* UIKit.framework in Frameworks */,
 				AC132A14163C1050006148EB /* Foundation.framework in Frameworks */,
 				AC132A16163C1050006148EB /* CoreGraphics.framework in Frameworks */,
@@ -56,6 +59,7 @@
 		AC132A02163C1050006148EB = {
 			isa = PBXGroup;
 			children = (
+				AC132A34163C1608006148EB /* CoreMotion.framework */,
 				AC132A17163C1050006148EB /* iosc */,
 				AC132A10163C1050006148EB /* Frameworks */,
 				AC132A0E163C1050006148EB /* Products */,
@@ -223,7 +227,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -244,7 +248,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
