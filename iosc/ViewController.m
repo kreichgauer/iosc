@@ -15,6 +15,7 @@
 @implementation ViewController
 
 @synthesize oscManager;
+@synthesize motionManager;
 
 - (void)viewDidLoad
 {
@@ -29,43 +30,26 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)connectPressed:(UIButton *)sender
 {
-    //Gyroscope
-    if([self.motionManager isGyroAvailable])
+    if([self.motionManager isDeviceMotionAvailable])
     {
-        /* Start the gyroscope if it is not active already */
         if([self.motionManager isGyroActive] == NO)
         {
-            /* Update us 2 times a second */
-            [self.motionManager setGyroUpdateInterval:1.0f / 60];
-            
-            /* And on a handler block object */
-            
-            /* Receive the gyroscope data on this block */
-            [self.motionManager startGyroUpdatesToQueue:[NSOperationQueue mainQueue]
-                                            withHandler:^(CMGyroData *gyroData, NSError *error)
+            motionManager.deviceMotionUpdateInterval = 1.0f / 5;
+            OSCOutPort *outPort = [oscManager createNewOutputToAddress:ipField.text atPort:portField.text.intValue];
+
+            [self.motionManager startDeviceMotionUpdatesToQueue:[NSOperationQueue mainQueue]
+                                            withHandler:^(CMDeviceMotion *motionData, NSError *error)
              {
-                 // create an output so i can send OSC data to myself
-                 OSCOutPort *outPort = [oscManager createNewOutputToAddress:ipField.text atPort:portField.text.intValue];
-           
-                 NSString *x = [[NSString alloc] initWithFormat:@"%.02f",gyroData.rotationRate.x];
-                 NSString *y = [[NSString alloc] initWithFormat:@"%.02f",gyroData.rotationRate.y];
-                 NSString *z = [[NSString alloc] initWithFormat:@"%.02f",gyroData.rotationRate.z];
-                 // NSLog(@"%@,%@,%@", x, y, z);
-                 
-                 // make an OSC message
+                 CMAttitude *attitude = motionData.attitude;
+//                 NSLog(@"yaw: %f pitch: %f roll %f", attitude.yaw, attitude.pitch, attitude.roll);
+
                  OSCMessage *newMsg = [OSCMessage createWithAddress:@"/iosc3"];
 
-                 // add a bunch arguments to the message
-                 [newMsg addFloat:gyroData.rotationRate.x];
-                 [newMsg addFloat:gyroData.rotationRate.y];
-                 [newMsg addFloat:gyroData.rotationRate.z];
-                 
-                 // send the OSC message
+                 [newMsg addFloat:attitude.yaw];
                  [outPort sendThisMessage:newMsg];
              }];
 
@@ -81,7 +65,7 @@
 
 - (IBAction)disconnectPressed:(UIButton *)sender
 {
-    [self.motionManager stopGyroUpdates];
+    [self.motionManager stopDeviceMotionUpdates];
     [connectButton setHighlighted:NO];
     [disconnectButton setHighlighted:YES];
 }
